@@ -33,7 +33,7 @@ setInterval (function (){
 let date = new Date();
 let time = [
     (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()),
-    (date.getMinutes() < 10 ? '0' + date.getHours() : date.getHours()),
+    (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()),
     (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()),
 ].join(':');
 document.getElementById('clock').innerText = time;
@@ -43,7 +43,7 @@ setInterval (function (){
     let date = new Date();
     let time = [
         (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()),
-        (date.getMinutes() < 10 ? '0' + date.getHours() : date.getHours()),        
+        (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()),        
     ].join(':');
     document.getElementById('clock2').innerText = time;
     }, 60);
