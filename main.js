@@ -77,3 +77,26 @@ divTime.addEventListener('click', () => {
         time.classList.toggle('hidden');            
     }
 });
+
+// 3 Вариант с исправленными замечаниями.
+
+function clockTim () {
+    let clockTime = document.getElementById('clockTime');
+    let date = new Date();
+    let hours = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours());
+    let minutes = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+    let seconds = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+
+    clockTime.children[0].innerHTML = hours + ':';
+    clockTime.children[1].innerHTML = minutes;
+    clockTime.children[2].innerHTML = ':' + seconds;
+}
+
+setInterval(clockTim, 60);
+
+let clockTime = document.getElementById('clockTime');
+
+clockTime.addEventListener('click', () => {
+    let seconds = document.getElementById('seconds');
+    seconds.classList.toggle('hidden');
+});
